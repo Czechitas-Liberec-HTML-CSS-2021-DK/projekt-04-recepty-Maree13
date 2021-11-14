@@ -1,0 +1,192 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni
+s pribyvajici sirkou pridavame media query pro
+středně široké obrazovky:
+@media (min-width: 480px) {
+}
+široké obrazovky
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+
+
+.kontejner {
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-items: center;
+}
+
+.salat {
+  background-image: URL('images/salat.jpg');
+  background-size: cover;
+  min-height: 200px;
+  font-size: 0.8rem;
+  width: 100%;
+  flex-grow: 2;
+  padding: 0.5rem;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*div {
+  justify-content:space-evenly;
+  text-align:start;
+}*/
+
+span {
+  list-style-type: none;
+  display: inline-flex;
+  text-align: left;
+  font-size:0.8rem;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+
+
+  .hlavni {
+    font-size: 1.2rem;
+    font-weight: 800px;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.75rem;
+  }
+
+  .titulek {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800px;
+  }
+
+
+  .koment {
+    padding-right: 0.5rem;
+  }
+
+.chlebicek {
+  background-image: url('images/chlebicek.jpg');
+  background-size: cover;
+  min-height: 90px;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1.75rem;
+}
+
+.cizrna {
+  background-image: url('images/cizrna.jpg');
+  background-size: cover;
+  min-height: 90px;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.tacos {
+  background-image: url('images/tacos.jpg');
+  background-size: cover;
+  min-height: 90px;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.burger {
+  background-image: url('images/burger.jpg');
+  background-size: cover;
+  min-height: 90px;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+/*Tablet*/
+@media (min-width:480px) {
+  .kontejner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1.25rem;
+    align-content: center;
+  }
+    .titulek {
+    font-size: 2rem;
+  }
+    .salat {
+        min-height: 250px;
+        font-size: 2rem;
+        width: 100%;
+        padding: 1.25rem;
+      }
+    .burger,
+    .chlebicek,
+    .cizrna,
+    .tacos {
+      min-height: 150px;
+      font-size: 1.5rem;
+      width: 50%;
+      padding: 1.25rem;
+    }
+}
+
+/*Big screen*/
+@media (min-width: 860px) {
+  .kontejner {
+    padding: 1.25rem;
+    flex-direction: row;
+  }
+  .titulek {
+    font-size: 3rem;
+  }
+  .salat {
+    min-height: 400px;
+    font-size: 3rem;
+    flex-grow: 2;
+    order: 1;
+    padding: 1.25rem;
+    float: right;
+    height: 100%;
+  }
+
+
+.burger,
+.chlebicek,
+.cizrna,
+.tacos {
+  min-height: 200px;
+  font-size: 1.75rem;
+  flex-grow: 1;
+  order: 2;
+  height: 20vw;
+  padding: 1.25rem;
+}
+}
